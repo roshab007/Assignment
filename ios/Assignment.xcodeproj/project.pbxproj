@@ -19,6 +19,7 @@
 		745A4219ACF24F96A6299C6A /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCC4B9F7FC7F43228DF0110E /* Roboto-Regular.ttf */; };
 		591B8747DD784EC988EF5F13 /* SpaceGrotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1736AF5D4C6C4458A69194E4 /* SpaceGrotesk-Bold.ttf */; };
 		2F28DDB23EEC4F28A29379C7 /* SpaceGrotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BE8BF47C7489BBEB1E499 /* SpaceGrotesk-Regular.ttf */; };
+		8C0973FB409345CDBEAA0065 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018D05E3E36747D7AA771384 /* BootSplash.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		FCC4B9F7FC7F43228DF0110E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1736AF5D4C6C4458A69194E4 /* SpaceGrotesk-Bold.ttf */ = {isa = PBXFileReference; name = "SpaceGrotesk-Bold.ttf"; path = "../src/assets/fonts/SpaceGrotesk-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		3B4BE8BF47C7489BBEB1E499 /* SpaceGrotesk-Regular.ttf */ = {isa = PBXFileReference; name = "SpaceGrotesk-Regular.ttf"; path = "../src/assets/fonts/SpaceGrotesk-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		018D05E3E36747D7AA771384 /* BootSplash.storyboard */ = {isa = PBXFileReference; name = "BootSplash.storyboard"; path = "Assignment/BootSplash.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				018D05E3E36747D7AA771384 /* BootSplash.storyboard */,
 			);
 			name = Assignment;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				745A4219ACF24F96A6299C6A /* Roboto-Regular.ttf in Resources */,
 				591B8747DD784EC988EF5F13 /* SpaceGrotesk-Bold.ttf in Resources */,
 				2F28DDB23EEC4F28A29379C7 /* SpaceGrotesk-Regular.ttf in Resources */,
+				8C0973FB409345CDBEAA0065 /* BootSplash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
