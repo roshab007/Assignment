@@ -1,5 +1,11 @@
-import React from 'react';
-import {Dimensions, ImageBackground, Text, View} from 'react-native';
+import React, {useState} from 'react';
+import {
+  Dimensions,
+  ImageBackground,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import ReactNativeSwipeableViewStack from 'react-native-swipeable-view-stack';
 import FingerPrintIcon from '../assets/images/tabs/fingerprint.svg';
 import FlightIcon from '../assets/images/tabs/flight.svg';
@@ -8,6 +14,7 @@ import HistoryIcon from '../assets/images/tabs/history.svg';
 import MembershipIcon from '../assets/images/tabs/membership.svg';
 import WaterDropIcon from '../assets/images/tabs/waterdrop.svg';
 import cardDetails from '../store/cardDetails';
+import FloatingButton from './FloatingButton';
 
 interface TabProps {}
 
@@ -21,23 +28,39 @@ const tabImages = [
 ];
 
 const {width} = Dimensions.get('screen');
-const paddinghorizontal = width - 500;
-console.log(paddinghorizontal);
 
 const Tab: React.FC<TabProps> = ({}) => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   return (
     <View className="bg-app-grey flex-1 px-5">
-      <View className="flex-row justify-between py-12 items-center">
+      <View className="flex-row justify-between py-4 items-center">
         {tabImages.map((Image, index) => {
-          return <Image key={index} />;
+          const isSelected = selectedIndex === index;
+          return (
+            <TouchableOpacity
+              className="justify-center items-center"
+              onPress={() => setSelectedIndex(index)}>
+              <Image
+                key={index}
+                height={isSelected ? 51 : 35}
+                width={isSelected ? 51 : 34}
+                opacity={isSelected ? 1 : 0.25}
+              />
+            </TouchableOpacity>
+          );
         })}
       </View>
 
       <ReactNativeSwipeableViewStack
-        onSwipe={swipedIndex => console.log(swipedIndex)}
+        onSwipe={index => {
+          console.log(index);
+        }}
         initialSelectedIndex={0}
         data={cardDetails}
         renderItem={item => {
+          const textColor = item.id === 9 ? 'text-black' : 'text-white';
+
           return (
             <ImageBackground
               source={item.image}
@@ -47,18 +70,22 @@ const Tab: React.FC<TabProps> = ({}) => {
                 height: 300,
               }}
               className="px-[8%]">
-              <Text className="text-white font-SpaceGrotesk-Bold text-xs mt-[12%]">
+              <Text
+                className={`${textColor} font-SpaceGrotesk-Bold text-xs mt-[12%]`}>
                 {item.bankName}
               </Text>
-              <Text className="text-white font-SpaceGrotesk-Bold text-xl mt-[18%]">
+              <Text
+                className={`${textColor} font-SpaceGrotesk-Bold text-xl mt-[18%]`}>
                 {item.cardNumber}
               </Text>
 
               <View className="flex-row mt-[18%] w-[67%] justify-between">
-                <Text className="text-white font-SpaceGrotesk-Bold text-base">
+                <Text
+                  className={`${textColor} font-SpaceGrotesk-Bold text-base`}>
                   {item.name}
                 </Text>
-                <Text className="text-white font-SpaceGrotesk-Bold text-base">
+                <Text
+                  className={`${textColor} font-SpaceGrotesk-Bold text-base`}>
                   {item.expiry}
                 </Text>
               </View>
@@ -70,6 +97,7 @@ const Tab: React.FC<TabProps> = ({}) => {
         }}
         stackSpacing={20}
       />
+      <FloatingButton />
     </View>
   );
 };
