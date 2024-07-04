@@ -1,7 +1,13 @@
-import {SafeAreaView} from 'react-native';
+import {StatusBar} from 'react-native';
+import Home from './src/screens/Home';
 
 const App: React.FC = () => {
-  return <SafeAreaView className="flex-1"></SafeAreaView>;
+  return (
+    <>
+      <StatusBar backgroundColor={'black'} barStyle={'light-content'} />
+      <Home />
+    </>
+  );
 };
 
 export default App;
