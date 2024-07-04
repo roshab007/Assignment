@@ -10,6 +10,7 @@ module.exports = {
         'Roboto-Regular': 'Roboto-Regular',
         'Helvetica-Regular': 'Helvetica-65-Regular',
         'Helvetica-Bold': 'Helvetica-65-Bold',
+        'SpaceGrotesk-Bold': 'SpaceGrotesk-Bold',
       },
     },
   },

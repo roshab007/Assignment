@@ -3192,6 +3192,7 @@ __metadata:
     react-native: 0.74.3
     react-native-svg: ^15.3.0
     react-native-svg-transformer: ^1.4.0
+    react-native-swipeable-view-stack: ^1.0.4
     react-test-renderer: 18.2.0
     tailwindcss: 3.3.2
     typescript: 5.0.4
@@ -8689,6 +8690,13 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: e976878361c100639ab4f9bd2cd042f526b28890cc0052139b36a5ebde44cd3b1a54c6dd3b5e391fe10a998767a994748fc6ee3f1b356154418828d12f98d77a
+  languageName: node
+  linkType: hard
+
+"react-native-swipeable-view-stack@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "react-native-swipeable-view-stack@npm:1.0.4"
+  checksum: 126505e2c93a4d64b17eeef9c34d74d408bfe87e68746019e3bd56fc500541ce83d9b18edd282e5f934f783b6cfb5f9f3a56e00a764b0c1473f98b59891c9fe1
   languageName: node
   linkType: hard
 
