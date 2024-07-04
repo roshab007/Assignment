@@ -18,6 +18,7 @@
 		EB6052395C78495DA3D6B10C /* Helvetica-65-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED0F61D558E5443192B20341 /* Helvetica-65-Regular.ttf */; };
 		745A4219ACF24F96A6299C6A /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCC4B9F7FC7F43228DF0110E /* Roboto-Regular.ttf */; };
 		591B8747DD784EC988EF5F13 /* SpaceGrotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1736AF5D4C6C4458A69194E4 /* SpaceGrotesk-Bold.ttf */; };
+		2F28DDB23EEC4F28A29379C7 /* SpaceGrotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BE8BF47C7489BBEB1E499 /* SpaceGrotesk-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		ED0F61D558E5443192B20341 /* Helvetica-65-Regular.ttf */ = {isa = PBXFileReference; name = "Helvetica-65-Regular.ttf"; path = "../src/assets/fonts/Helvetica-65-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		FCC4B9F7FC7F43228DF0110E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1736AF5D4C6C4458A69194E4 /* SpaceGrotesk-Bold.ttf */ = {isa = PBXFileReference; name = "SpaceGrotesk-Bold.ttf"; path = "../src/assets/fonts/SpaceGrotesk-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3B4BE8BF47C7489BBEB1E499 /* SpaceGrotesk-Regular.ttf */ = {isa = PBXFileReference; name = "SpaceGrotesk-Regular.ttf"; path = "../src/assets/fonts/SpaceGrotesk-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				ED0F61D558E5443192B20341 /* Helvetica-65-Regular.ttf */,
 				FCC4B9F7FC7F43228DF0110E /* Roboto-Regular.ttf */,
 				1736AF5D4C6C4458A69194E4 /* SpaceGrotesk-Bold.ttf */,
+				3B4BE8BF47C7489BBEB1E499 /* SpaceGrotesk-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				EB6052395C78495DA3D6B10C /* Helvetica-65-Regular.ttf in Resources */,
 				745A4219ACF24F96A6299C6A /* Roboto-Regular.ttf in Resources */,
 				591B8747DD784EC988EF5F13 /* SpaceGrotesk-Bold.ttf in Resources */,
+				2F28DDB23EEC4F28A29379C7 /* SpaceGrotesk-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

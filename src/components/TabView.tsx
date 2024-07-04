@@ -40,9 +40,9 @@ const Tab: React.FC<TabProps> = ({}) => {
           return (
             <TouchableOpacity
               className="justify-center items-center"
-              onPress={() => setSelectedIndex(index)}>
+              onPress={() => setSelectedIndex(index)}
+              key={index}>
               <Image
-                key={index}
                 height={isSelected ? 51 : 35}
                 width={isSelected ? 51 : 34}
                 opacity={isSelected ? 1 : 0.25}
@@ -59,7 +59,8 @@ const Tab: React.FC<TabProps> = ({}) => {
         initialSelectedIndex={0}
         data={cardDetails}
         renderItem={item => {
-          const textColor = item.id === 9 ? 'text-black' : 'text-white';
+          const textColor =
+            item.id === 9 || item.id === 8 ? 'text-black' : 'text-white';
 
           return (
             <ImageBackground
@@ -79,15 +80,28 @@ const Tab: React.FC<TabProps> = ({}) => {
                 {item.cardNumber}
               </Text>
 
-              <View className="flex-row mt-[18%] w-[67%] justify-between">
-                <Text
-                  className={`${textColor} font-SpaceGrotesk-Bold text-base`}>
-                  {item.name}
-                </Text>
-                <Text
-                  className={`${textColor} font-SpaceGrotesk-Bold text-base`}>
-                  {item.expiry}
-                </Text>
+              <View className="flex-[0.9] flex-row items-center justify-between max-w-[65%]">
+                <View>
+                  <Text
+                    className={`${textColor} font-SpaceGrotesk-Regular text-xs opacity-80`}>
+                    Card Holder Name
+                  </Text>
+                  <Text
+                    className={`${textColor} font-SpaceGrotesk-Bold text-base`}>
+                    {item.name}
+                  </Text>
+                </View>
+
+                <View>
+                  <Text
+                    className={`${textColor} font-SpaceGrotesk-Regular text-xs opacity-80`}>
+                    Expiry Date
+                  </Text>
+                  <Text
+                    className={`${textColor} font-SpaceGrotesk-Bold text-base`}>
+                    {item.expiry}
+                  </Text>
+                </View>
               </View>
             </ImageBackground>
           );

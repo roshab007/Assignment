@@ -11,6 +11,7 @@ module.exports = {
         'Helvetica-Regular': 'Helvetica-65-Regular',
         'Helvetica-Bold': 'Helvetica-65-Bold',
         'SpaceGrotesk-Bold': 'SpaceGrotesk-Bold',
+        'SpaceGrotesk-Regular': 'SpaceGrotesk-Regular',
       },
     },
   },

@@ -16,6 +16,10 @@
     {
       "path": "src/assets/fonts/SpaceGrotesk-Bold.ttf",
       "sha1": "b2aa14fa837cf3ed5e647c87906e88238d88c548"
+    },
+    {
+      "path": "src/assets/fonts/SpaceGrotesk-Regular.ttf",
+      "sha1": "d1666e3605d713802650ab26c0914238ca124274"
     }
   ]
 }
