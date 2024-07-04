@@ -1,0 +1,7 @@
+{
+  "replaceAttrValues": {
+    "currentFill": "{props.fill}",
+    "currentStroke": "{props.stroke}",
+    "currentOpacity": "{props.opacity}"
+  }
+}
