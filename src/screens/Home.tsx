@@ -7,7 +7,7 @@ interface HomeProps {}
 
 const Home: React.FC<HomeProps> = ({}) => {
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1 bg-app-grey">
       <ScrollView contentContainerStyle={{flexGrow: 1}}>
         <Header />
         <TabView />
