@@ -7,7 +7,7 @@ interface FloatingButtonProps {}
 const FloatingButton: React.FC<FloatingButtonProps> = ({}) => {
   return (
     <TouchableOpacity
-      className={`bg-white h-[102px] w-[102px] rounded-full shadow-md justify-center items-center absolute bottom-4 right-8`}
+      className={`bg-white h-[102px] w-[102px] z-50 rounded-full shadow-md justify-center items-center absolute bottom-4 right-8`}
       activeOpacity={0.5}>
       <Images.Plus />
     </TouchableOpacity>
