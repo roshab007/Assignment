@@ -63,7 +63,7 @@ const Tab: React.FC = ({}) => {
           console.log(index);
         }}
         initialSelectedIndex={0}
-        data={shuffleCards()}
+        data={cardDetails}
         renderItem={item => {
           const textColor =
             item.id === 9 || item.id === 8 ? 'text-black' : 'text-white';
@@ -77,16 +77,19 @@ const Tab: React.FC = ({}) => {
                 height: 300,
               }}
               className="px-[8%]">
-              <Text
-                className={`${textColor} font-SpaceGrotesk-Bold text-xs mt-[12%]`}>
-                {item.bankName}
-              </Text>
-              <Text
-                className={`${textColor} font-SpaceGrotesk-Bold text-xl mt-[18%]`}>
-                {item.cardNumber}
-              </Text>
+              <View className="flex-1 justify-center mb-1">
+                <Text className={`${textColor} font-SpaceGrotesk-Bold text-xs`}>
+                  {item.bankName}
+                </Text>
+              </View>
 
-              <View className="flex-[0.9] flex-row items-center justify-between max-w-[65%]">
+              <View className="flex-[0.7] justify-center mb-5">
+                <Text className={`${textColor} font-SpaceGrotesk-Bold text-xl`}>
+                  {item.cardNumber}
+                </Text>
+              </View>
+
+              <View className="flex-1 flex-row  justify-between max-w-[65%]">
                 <View>
                   <Text
                     className={`${textColor} font-SpaceGrotesk-Regular text-xs opacity-80`}>
