@@ -16,8 +16,6 @@ import WaterDropIcon from '../assets/images/tabs/waterdrop.svg';
 import cardDetails from '../store/cardDetails';
 import FloatingButton from './FloatingButton';
 
-interface TabProps {}
-
 const tabImages = [
   FingerPrintIcon,
   FlightIcon,
@@ -29,8 +27,16 @@ const tabImages = [
 
 const {width} = Dimensions.get('screen');
 
-const Tab: React.FC<TabProps> = ({}) => {
+const Tab: React.FC = ({}) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const shuffleCards = () => {
+    for (let i = cardDetails.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [cardDetails[i], cardDetails[j]] = [cardDetails[j], cardDetails[i]];
+    }
+    return cardDetails;
+  };
 
   return (
     <View className="bg-app-grey flex-1 px-5">
@@ -57,7 +63,7 @@ const Tab: React.FC<TabProps> = ({}) => {
           console.log(index);
         }}
         initialSelectedIndex={0}
-        data={cardDetails}
+        data={shuffleCards()}
         renderItem={item => {
           const textColor =
             item.id === 9 || item.id === 8 ? 'text-black' : 'text-white';
