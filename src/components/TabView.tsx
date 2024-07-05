@@ -1,11 +1,5 @@
 import React, {useState} from 'react';
-import {
-  Dimensions,
-  ImageBackground,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Dimensions, ImageBackground, Text, View} from 'react-native';
 import ReactNativeSwipeableViewStack from 'react-native-swipeable-view-stack';
 import FingerPrintIcon from '../assets/images/tabs/fingerprint.svg';
 import FlightIcon from '../assets/images/tabs/flight.svg';
@@ -14,6 +8,7 @@ import HistoryIcon from '../assets/images/tabs/history.svg';
 import MembershipIcon from '../assets/images/tabs/membership.svg';
 import WaterDropIcon from '../assets/images/tabs/waterdrop.svg';
 import cardDetails from '../store/cardDetails';
+import AnimatedButton from './AnimatedButton';
 import FloatingButton from './FloatingButton';
 
 const tabImages = [
@@ -44,16 +39,17 @@ const Tab: React.FC = ({}) => {
         {tabImages.map((Image, index) => {
           const isSelected = selectedIndex === index;
           return (
-            <TouchableOpacity
-              className="justify-center items-center"
-              onPress={() => setSelectedIndex(index)}
+            <AnimatedButton
+              onPress={() => {
+                setSelectedIndex(index);
+              }}
               key={index}>
               <Image
                 height={isSelected ? 51 : 35}
                 width={isSelected ? 51 : 34}
                 opacity={isSelected ? 1 : 0.25}
               />
-            </TouchableOpacity>
+            </AnimatedButton>
           );
         })}
       </View>
@@ -63,7 +59,7 @@ const Tab: React.FC = ({}) => {
           console.log(index);
         }}
         initialSelectedIndex={0}
-        data={cardDetails}
+        data={shuffleCards()}
         renderItem={item => {
           const textColor =
             item.id === 9 || item.id === 8 ? 'text-black' : 'text-white';
